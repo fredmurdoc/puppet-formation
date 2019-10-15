@@ -50,3 +50,29 @@ include maclasse
 notice($maclasse::packages['sshserver'])
 
 ```
+
+
+## les modules
+
+/etc/puppet/modules
+classes du meme nom que le module 
+
+Utilisation de PDK outil de developpement Puppet
+
+̀`̀``puppet
+cd production/modules
+pdk new module apache
+cd apache
+pdk new class apache
+̀``
+Cela crée le module apache et le manifest manifests/init.pp
+
+
+tests apres avoir créé un vhost www.example.com:80
+```bash
+curl -H 'Host: www.example.com' http://localhost:80/
+```
+
+```bash
+ip a add  172.16.8.5  dev enp0s31f6
+```
